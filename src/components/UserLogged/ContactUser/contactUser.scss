@@ -1,0 +1,85 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.contactUser {
+  .messages-box {
+    margin-top: 4rem;
+    .messages {
+      display: flex;
+      flex-direction: column;
+      background-color: #5d5858;
+      margin: 0 auto;
+      width: 70%;
+      list-style-type: none;
+      box-shadow: 0 0 75px 67px rgba(93, 88, 88, 1);
+      font-size: 1.3rem;
+      .trainer__message {
+        background-color: #252424;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -15%;
+          left: 3%;
+          transform: rotate(15deg);
+          width: 0;
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid #252424;
+        }
+      }
+      .user__message {
+        background-color: $primaryFontColor;
+        margin-bottom: 1.5rem;
+        align-self: flex-end;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -27%;
+          right: 3%;
+          transform: rotate(-15deg);
+          width: 0;
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid $primaryFontColor;
+        }
+        .userIcon {
+          font-size: 2rem;
+          margin: 0 1rem;
+          float: right;
+        }
+      }
+    }
+    .userNinjaIcon {
+      font-size: 2rem;
+      margin: 0 1rem;
+      float: left;
+    }
+    .newMessage {
+      display: flex;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      input {
+        @include input-styles;
+        font-size: 1.2rem;
+        width: 100%;
+      }
+      .sendPlane {
+        font-size: 2rem;
+        margin-top: 30px;
+        cursor: pointer;
+        &:hover {
+          color: #868282;
+        }
+      }
+    }
+  }
+}

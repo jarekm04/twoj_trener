@@ -1,0 +1,78 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.calculatorsUser {
+  padding: 1rem 2.5rem;
+  .calculator {
+    margin-bottom: 2rem;
+    .calculator__title {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      margin-top: 0.7rem;
+    }
+    .sexChoose {
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
+      .man-box,
+      .woman-box {
+        margin: 1rem;
+        label {
+          padding: 0.5rem;
+        }
+      }
+    }
+    .inputs {
+      display: flex;
+      justify-content: space-evenly;
+      .weight-box,
+      .height-box,
+      .age-box {
+        display: flex;
+        flex-direction: column;
+        label {
+          text-align: center;
+          font-size: 1.2rem;
+          margin-top: 0.5rem;
+        }
+        input {
+          @include input-styles;
+          font-weight: bold;
+          width: 100%;
+          &:valid {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+    .calculator__btn {
+      @include btn-styles;
+      font-size: 1.4rem;
+      padding: 0.5rem 2rem;
+      margin-top: 1.5rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+    .calculator__text {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .result {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .bmiList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      li {
+        transition: 1s linear;
+        &.active {
+          color: $primaryFontColor;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

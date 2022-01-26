@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+
+.notes {
+  .notes-box {
+    height: 37.5rem;
+    position: relative;
+    .list {
+      position: absolute;
+      top: 40%;
+      left: 60%;
+      font-size: 1.5rem;
+      font-style: italic;
+      letter-spacing: 0.2rem;
+      .list__item {
+        list-style-type: none;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        .fa-arrow-right {
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}

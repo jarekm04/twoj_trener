@@ -1,0 +1,61 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.home-user {
+  .h-u__title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 0.3rem;
+    margin-bottom: 2rem;
+  }
+  .h-u__textFirst {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .h-u__textSecond {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: $primaryFontColor;
+  }
+  .h-u__question {
+    position: relative;
+    padding: 0.8rem 0;
+    transform: translateX(15%);
+    margin-bottom: 2rem;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    label {
+      transition: ( all 0.25s cubic-bezier(.53,.01,.35,1.5));
+      transform-origin: left center;
+      color: $primaryFontColor;
+      font-weight: 100;
+      letter-spacing: 0.01rem;
+      font-size: 17px;
+      box-sizing: border-box;
+      padding: 10px 15px;
+      display: block;
+      position: absolute;
+      margin-top: -40px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    input[type="text"] {
+      @include input-styles;
+    }
+  }
+  .h-u__checkWeather {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .h-u__weather {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+

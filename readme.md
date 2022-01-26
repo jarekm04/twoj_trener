@@ -1,1 +1,1 @@
-#twojtrener
+# TwojTrener.PL

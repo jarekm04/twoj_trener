@@ -1,0 +1,19 @@
+@import "styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundColor !important;
+  color: $secondaryFontColor !important;
+  font-family: $mainFont;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+

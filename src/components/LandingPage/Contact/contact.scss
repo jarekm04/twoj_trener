@@ -1,0 +1,41 @@
+@import "../../../styles/variables";
+
+.contact {
+  box-shadow: inset -0px -0px 29px 54px rgba(0, 0, 0, 1);
+  position: relative;
+  font-size: 1.5rem;
+  .upText {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 395px;
+    span {
+      color: $primaryFontColor;
+    }
+  }
+  .verticalLine {
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    height: 50%;
+    border-left: 4px solid $primaryFontColor;
+  }
+  .downText {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translatex(-50%);
+    min-width: 610px;
+    span {
+      color: $primaryFontColor;
+    }
+  }
+  .videoTag {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    filter: blur(5px);
+    border-radius: 2rem;
+  }
+}

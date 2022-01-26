@@ -1,0 +1,49 @@
+@mixin btn-styles {
+  font-family: $mainFont;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: $primaryFontColor;
+  color: $secondaryFontColor;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: $buttonHoverColor;
+  }
+}
+
+@mixin input-styles {
+  transition: ( all 0.25s cubic-bezier(.53,.01,.35,1.5));
+  appearance: none;
+  border: 1px solid $primaryFontColor;
+  line-height: 0;
+  font-size: 17px;
+  width: 70%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: $primaryFontColor;
+  font-weight: 100;
+  letter-spacing: 0.01rem;
+  position: relative;
+  z-index: 1;
+  &:focus {
+    outline: none;
+    background: $primaryFontColor;
+    color: white;
+    margin-top: 30px;
+  }
+  &:valid {
+    margin-top: 30px;
+  }
+  &:focus ~ label {
+    transform: translate( 0 , -35px );
+  }
+  &:valid ~ label {
+    text-transform: uppercase;
+    font-style: italic;
+    transform: ( translate( 5px , -35px ) scale(0.6));
+  }
+}

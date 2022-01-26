@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.notesUser {
+  .notesUser__title {
+    text-align: center;
+    margin: 2rem 3rem;
+  }
+  input[type="text"] {
+    @include input-styles;
+    color: $primaryFontColor;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .task {
+    background-color: #5d5858;
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    .icons {
+      font-size: 1.8rem;
+      min-width: 4rem;
+      float: right;
+      svg:hover {
+        color: $primaryFontColor;
+        cursor: pointer;
+      }
+    }
+  }
+  .btn {
+    @include btn-styles;
+    font-size: 1.6rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    margin-bottom: 2rem;
+  }
+}

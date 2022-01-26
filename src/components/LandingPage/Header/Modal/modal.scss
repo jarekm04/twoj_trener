@@ -1,0 +1,77 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.loginForm,
+.registerForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 1rem;
+    z-index: 20;
+    min-width: 22rem;
+    width: 25%;
+    background-color: #1a1a1a;
+    .login {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .email {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .password {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    label {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    input {
+        height: 2.5rem;
+        font-size: 1.2rem;
+        text-indent: 10px;
+    }
+    .logButtons {
+      display: flex;
+      justify-content: space-evenly;
+      .loginBtn,
+      .registerBtn {
+        @include btn-styles;
+        font-size: 1.1rem;
+        min-width: 120px;
+        }
+    }
+    .registerText {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .fa-times-circle {
+        position: absolute;
+        top: 4%;
+        right: 7%;
+        font-size: 1.8rem;
+        color: $primaryFontColor;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+          color: $secondaryFontColor;
+        }
+    }
+}
+
+.overlay-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 19;
+}
