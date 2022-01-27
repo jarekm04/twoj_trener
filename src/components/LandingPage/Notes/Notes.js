@@ -12,7 +12,7 @@ const Notes = () => {
                 <div className="notes-box">
                     <ul className="list">
                         <li className="list__item">
-                            <i className="fas fa-arrow-right"></i>
+                            <FontAwesomeIcon icon={faArrowRight} />
                             Sporządzaj swoje notatki
                         </li>
                         <li className="list__item">

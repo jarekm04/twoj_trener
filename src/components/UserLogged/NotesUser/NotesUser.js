@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './notesUser.scss';
 import HeaderUser from "../HeaderUser";
-import { AiFillEdit, AiFillDelete } from "react-icons/ai";
+import {AiFillEdit, AiFillDelete} from "react-icons/ai";
 import {set, ref, onValue, remove, update} from "firebase/database";
 import {auth, db} from "../../../firebase";
 
@@ -64,9 +64,11 @@ const NotesUser = () => {
         <>
             <HeaderUser/>
             <section className="notesUser container">
-                <h1 className="notesUser__title">Nie chcesz o czymś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
+                <h1 className="notesUser__title">
+                    Nie chcesz o czymś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
                     zapisywania
-                    swoich celów? Zrób to poniżej!</h1>
+                    swoich celów? Zrób to poniżej!
+                </h1>
                 <input
                     type="text"
                     value={todo}
@@ -85,8 +87,8 @@ const NotesUser = () => {
                 {todos.map((todo, index) => (
                     <div className="task" key={index}>
                         <div className="icons">
-                            <AiFillEdit onClick={() => handleUpdate(todo)} />
-                            <AiFillDelete onClick={() => handleDelete(todo.countID)} />
+                            <AiFillEdit onClick={() => handleUpdate(todo)}/>
+                            <AiFillDelete onClick={() => handleDelete(todo.countID)}/>
                         </div>
                         <p>{todo.todo}</p>
                     </div>

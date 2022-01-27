@@ -4,9 +4,11 @@ import contactVideo from '../../../assets/contact_video.mp4';
 
 const Contact = () => {
     return (
-        <section className="contact" id="contactID">
-            <h2 className="upText">Stała
-                <span>opieka</span> trenera!
+        <section className="contact"
+                 id="contactID"
+        >
+            <h2 className="upText">
+                Stała <span>opieka</span> trenera!
             </h2>
             <div className="verticalLine" />
             <h2 className="downText">

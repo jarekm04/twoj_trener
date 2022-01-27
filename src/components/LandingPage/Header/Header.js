@@ -37,8 +37,6 @@ const Header = () => { //isLogged, setIsLogged
             <Modal
                 showModal={modal}
                 closeModal={toggleModal}
-                // setIsLogged={setIsLogged}
-                // isLogged={isLogged}
             />
         </>
     );

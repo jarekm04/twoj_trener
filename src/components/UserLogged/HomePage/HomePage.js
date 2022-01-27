@@ -37,12 +37,13 @@ const HomePage = () => {
                     Co powiesz, żeby dzisiaj trochę pobiegać? Może chociaż mały spacer?
                 </p>
                 <div className="h-u__question">
-                    <input className="weatherInput"
-                           type="text"
-                           onChange={e => setCity(e.target.value)}
-                           value={city}
-                           onKeyPress={getWeather}
-                           required
+                    <input
+                        className="weatherInput"
+                        type="text"
+                        onChange={e => setCity(e.target.value)}
+                        value={city}
+                        onKeyPress={getWeather}
+                        required
                     />
                     <label>Wpisz swoje miasto</label>
                 </div>

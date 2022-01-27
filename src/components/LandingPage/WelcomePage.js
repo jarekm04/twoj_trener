@@ -1,4 +1,3 @@
-//landing page
 import Header from "./Header";
 import Slider from "./Slider";
 import TrainingPlan from "./TrainingPlan";

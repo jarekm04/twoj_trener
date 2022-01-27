@@ -80,15 +80,20 @@ const ContactUser = () => {
                                         className="user__message"
                                     >
                                         {message.msg}
-                                        <FontAwesomeIcon className="userIcon" icon={faUser} />
+                                        <FontAwesomeIcon className="userIcon" icon={faUser}/>
                                     </li>
                                 )
                             )
                         }
                     </ul>
                     <form className="newMessage" onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Dodaj wiadomość..." value={msg} name="text"
-                               onChange={handleChange}/>
+                        <input
+                            type="text"
+                            placeholder="Dodaj wiadomość..."
+                            value={msg}
+                            name="text"
+                            onChange={handleChange}
+                        />
                         <FontAwesomeIcon className="sendPlane" icon={faPaperPlane} onClick={handleSubmit}/>
                     </form>
                 </div>

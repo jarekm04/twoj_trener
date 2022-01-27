@@ -144,8 +144,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wyciskanie sztangi na ławce poziomej leżąc</h2>
-                                    <p className="exercise__desc">Wykonanie: Połóż się na ławce poziomej (płaskiej),
+                                    <h2 className="exercise__title">
+                                        Wyciskanie sztangi na ławce poziomej leżąc
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Połóż się na ławce poziomej (płaskiej),
                                         stopy
                                         postaw
                                         stabilnie na podłożu i ugnij nogi w kolanach tak, aby utworzył się kąt prosty.
@@ -162,7 +165,8 @@ const TrainingPlanUser = () => {
                                         czasie wydech (faza pozytywna). Łokcie w trakcie całego ćwiczenia powinny być
                                         oddalone
                                         od
-                                        ciała.</p>
+                                        ciała.
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("chestExercise") === "chest2" ? (<article className="exercise">
@@ -171,8 +175,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wyciskanie sztangielek, skos górny</h2>
-                                    <p className="exercise__desc">Wykonanie: Ustaw ławkę pod kątem 20-45 stopni. Połóż
+                                    <h2 className="exercise__title">
+                                        Wyciskanie sztangielek, skos górny
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Ustaw ławkę pod kątem 20-45 stopni. Połóż
                                         się na
                                         niej
                                         tak, aby pośladki i grzbiet przylegał bezpośrednio, stopy zaś wesprzyj stabilnie
@@ -193,7 +200,8 @@ const TrainingPlanUser = () => {
                                         tułów. W fazie tej pamiętaj o kolejnym wdechu. Łokcie w trakcie całego ćwiczenia
                                         powinny
                                         być
-                                        skierowane na zewnątrz, a nie do środka.</p>
+                                        skierowane na zewnątrz, a nie do środka.
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("chestExercise") === "chest3" ? (<article className="exercise">
@@ -202,8 +210,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Rozpiętki na maszynie, siedząc (butterfly)</h2>
-                                    <p className="exercise__desc">Wykonanie: Bardzo ważne jest zajęcie odpowiedniej
+                                    <h2 className="exercise__title">
+                                        Rozpiętki na maszynie, siedząc (butterfly)
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Bardzo ważne jest zajęcie odpowiedniej
                                         pozycji -
                                         powinieneś odpowiednio uregulować wysokość siedzenia i usadowić się tak, aby
                                         przedramię
@@ -226,7 +237,8 @@ const TrainingPlanUser = () => {
                                         mięśnie pracowały przez cały czas. Zadbaj też o pełne rozciągnięcie mięśni w
                                         fazie
                                         negatywnej. Łokcie w trakcie całego ćwiczenia powinny być oddalone od
-                                        tułowia.</p>
+                                        tułowia.
+                                    </p>
                                 </div>
                             </article>) : null}
                         </section>
@@ -237,8 +249,11 @@ const TrainingPlanUser = () => {
                                     <img src={back2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie sztangą</h2>
-                                    <p className="exercise__desc">Wykonanie: Podejdź do sztangi i rozstaw stopy na
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie sztangą
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podejdź do sztangi i rozstaw stopy na
                                         szerokość
                                         barków.
                                         Pochyl tułów zachowując naturalną krzywiznę kręgosłupa, a następnie złap gryf na
@@ -250,7 +265,8 @@ const TrainingPlanUser = () => {
                                         klatki
                                         (więcej w uwagach) zrób wydech i zacznij powoli opuszczać sztangę, aż do momentu
                                         pełnego
-                                        rozciągnięcia mięśni.</p>
+                                        rozciągnięcia mięśni.
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("backExercise") === "back2" ? (<article className="exercise">
@@ -259,8 +275,11 @@ const TrainingPlanUser = () => {
                                     <img src={back4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie końcem sztangi</h2>
-                                    <p className="exercise__desc">Wykonanie: Stań w rozkroku nad sztangą, ugnij kolana i
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie końcem sztangi
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Stań w rozkroku nad sztangą, ugnij kolana i
                                         złap
                                         uchwyt
                                         sztangi zachowując naturalną krzywiznę kręgosłupa. Weź wdech i patrząc przed
@@ -272,7 +291,8 @@ const TrainingPlanUser = () => {
                                         rozciągnięcia mięśni. Podczas wykonywania ćwiczenia trzymaj plecy prosto i
                                         staraj się
                                         nie
-                                        kołysać tułowiem.</p>
+                                        kołysać tułowiem.
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("backExercise") === "back3" ? (<article className="exercise">
@@ -281,8 +301,11 @@ const TrainingPlanUser = () => {
                                     <img src={back6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie na wyciągu dolnym</h2>
-                                    <p className="exercise__desc">Wykonanie: Usiądź na siedzisku maszyny i zaprzyj nogi
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie na wyciągu dolnym
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Usiądź na siedzisku maszyny i zaprzyj nogi
                                         o punkt
                                         podparcia. Chwyć gryf, weź wdech i zacznij ruch wiosłowania. Plecy trzymaj cały
                                         czas
@@ -290,7 +313,8 @@ const TrainingPlanUser = () => {
                                         W momencie dotknięcia gryfem brzucha wypnij klatkę do przodu i ściągnij łopatki,
                                         a
                                         następnie
-                                        zrób wydech i wróć kontrolując ciężar do pozycji wyjściowej.</p>
+                                        zrób wydech i wróć kontrolując ciężar do pozycji wyjściowej.
+                                    </p>
                                 </div>
                             </article>) : null}
                         </section>
@@ -301,8 +325,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wykroki ze sztangielkami</h2>
-                                    <p className="exercise__desc">Wykonanie: Podnieś sztangielki z podłoża. Pozycja
+                                    <h2 className="exercise__title">
+                                        Wykroki ze sztangielkami
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podnieś sztangielki z podłoża. Pozycja
                                         startowa i
                                         wykonanie ćwiczenia podobnie jak podczas wykroków ze sztangą, czyli klatka
                                         wypięta, a
@@ -320,7 +347,8 @@ const TrainingPlanUser = () => {
                                         przez
                                         odepchnięcie od podłoża (głównie przez pięty) i robiąc jednocześnie wydech.
                                         Powtórz
-                                        zaczynając tym razem od innej nogi.</p>
+                                        zaczynając tym razem od innej nogi.
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("legsExercise") === "legs2" ? (<article className="exercise">
@@ -329,8 +357,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Przysiad ze sztangą na barkach</h2>
-                                    <p className="exercise__desc">Wykonanie: Podejdź do stojaków, połóż ręce na gryfie,
+                                    <h2 className="exercise__title">
+                                        Przysiad ze sztangą na barkach
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podejdź do stojaków, połóż ręce na gryfie,
                                         a
                                         następnie
                                         podejdź po sztangę i ułóż gryf na barkach szerzej w uwagach). Wypnij klatkę do
@@ -356,7 +387,8 @@ const TrainingPlanUser = () => {
                                         przodu i robiąc wydech, aż do pozycji wyjściowej. Podczas całego ćwiczenia
                                         zachowuj
                                         naturalną krzywiznę kręgosłupa (unikaj tzw. kociego grzbietu i okrągłych
-                                        pleców).</p>
+                                        pleców).
+                                    </p>
                                 </div>
                             </article>) : null}
                             {localStorage.getItem("legsExercise") === "legs3" ? (<article className="exercise">
@@ -365,8 +397,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wypychanie nóg na suwnicy</h2>
-                                    <p className="exercise__desc">Wykonanie: Usiądź w siedzisku maszyny. Połóż stopy na
+                                    <h2 className="exercise__title">
+                                        Wypychanie nóg na suwnicy
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Usiądź w siedzisku maszyny. Połóż stopy na
                                         platformie
                                         (powinny w całości do niej przylegać) mniej więcej na szerokość barków (szerzej
                                         o tym w
@@ -374,7 +409,8 @@ const TrainingPlanUser = () => {
                                         W
                                         momencie,
                                         gdy nogi ugną się w kolanach pod kątem ok. 90 stopni zacznij wypychanie ciężaru,
-                                        jednocześnie robiąc wydech.</p>
+                                        jednocześnie robiąc wydech.
+                                    </p>
                                 </div>
                             </article>) : null}
                         </section>
@@ -393,8 +429,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wyciskanie sztangi na ławce poziomej leżąc</h2>
-                                    <p className="exercise__desc">Wykonanie: Połóż się na ławce poziomej (płaskiej),
+                                    <h2 className="exercise__title">
+                                        Wyciskanie sztangi na ławce poziomej leżąc
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Połóż się na ławce poziomej (płaskiej),
                                         stopy
                                         postaw
                                         stabilnie na podłożu i ugnij nogi w kolanach tak, aby utworzył się kąt
@@ -411,7 +450,8 @@ const TrainingPlanUser = () => {
                                         czasie wydech (faza pozytywna). Łokcie w trakcie całego ćwiczenia powinny
                                         być oddalone
                                         od
-                                        ciała.</p>
+                                        ciała.
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -420,8 +460,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wyciskanie sztangielek, skos górny</h2>
-                                    <p className="exercise__desc">Wykonanie: Ustaw ławkę pod kątem 20-45 stopni.
+                                    <h2 className="exercise__title">
+                                        Wyciskanie sztangielek, skos górny
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Ustaw ławkę pod kątem 20-45 stopni.
                                         Połóż się na
                                         niej
                                         tak, aby pośladki i grzbiet przylegał bezpośrednio, stopy zaś wesprzyj
@@ -442,7 +485,8 @@ const TrainingPlanUser = () => {
                                         tułów. W fazie tej pamiętaj o kolejnym wdechu. Łokcie w trakcie całego
                                         ćwiczenia powinny
                                         być
-                                        skierowane na zewnątrz, a nie do środka.</p>
+                                        skierowane na zewnątrz, a nie do środka.
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -451,8 +495,11 @@ const TrainingPlanUser = () => {
                                     <img src={chest6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Rozpiętki na maszynie, siedząc (butterfly)</h2>
-                                    <p className="exercise__desc">Wykonanie: Bardzo ważne jest zajęcie odpowiedniej
+                                    <h2 className="exercise__title">
+                                        Rozpiętki na maszynie, siedząc (butterfly)
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Bardzo ważne jest zajęcie odpowiedniej
                                         pozycji -
                                         powinieneś odpowiednio uregulować wysokość siedzenia i usadowić się tak, aby
                                         przedramię
@@ -476,7 +523,8 @@ const TrainingPlanUser = () => {
                                         mięśnie pracowały przez cały czas. Zadbaj też o pełne rozciągnięcie mięśni w
                                         fazie
                                         negatywnej. Łokcie w trakcie całego ćwiczenia powinny być oddalone od
-                                        tułowia.</p>
+                                        tułowia.
+                                    </p>
                                 </div>
                             </article>
                         </section>
@@ -487,8 +535,11 @@ const TrainingPlanUser = () => {
                                     <img src={back2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie sztangą</h2>
-                                    <p className="exercise__desc">Wykonanie: Podejdź do sztangi i rozstaw stopy na
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie sztangą
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podejdź do sztangi i rozstaw stopy na
                                         szerokość
                                         barków.
                                         Pochyl tułów zachowując naturalną krzywiznę kręgosłupa, a następnie złap
@@ -501,7 +552,8 @@ const TrainingPlanUser = () => {
                                         klatki
                                         (więcej w uwagach) zrób wydech i zacznij powoli opuszczać sztangę, aż do
                                         momentu pełnego
-                                        rozciągnięcia mięśni.</p>
+                                        rozciągnięcia mięśni.
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -510,8 +562,11 @@ const TrainingPlanUser = () => {
                                     <img src={back4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie końcem sztangi</h2>
-                                    <p className="exercise__desc">Wykonanie: Stań w rozkroku nad sztangą, ugnij
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie końcem sztangi
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Stań w rozkroku nad sztangą, ugnij
                                         kolana i złap
                                         uchwyt
                                         sztangi zachowując naturalną krzywiznę kręgosłupa. Weź wdech i patrząc przed
@@ -524,7 +579,8 @@ const TrainingPlanUser = () => {
                                         rozciągnięcia mięśni. Podczas wykonywania ćwiczenia trzymaj plecy prosto i
                                         staraj się
                                         nie
-                                        kołysać tułowiem.</p>
+                                        kołysać tułowiem.
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -533,8 +589,11 @@ const TrainingPlanUser = () => {
                                     <img src={back6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wiosłowanie na wyciągu dolnym</h2>
-                                    <p className="exercise__desc">Wykonanie: Usiądź na siedzisku maszyny i zaprzyj
+                                    <h2 className="exercise__title">
+                                        Wiosłowanie na wyciągu dolnym
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Usiądź na siedzisku maszyny i zaprzyj
                                         nogi o punkt
                                         podparcia. Chwyć gryf, weź wdech i zacznij ruch wiosłowania. Plecy trzymaj
                                         cały czas
@@ -542,7 +601,8 @@ const TrainingPlanUser = () => {
                                         W momencie dotknięcia gryfem brzucha wypnij klatkę do przodu i ściągnij
                                         łopatki, a
                                         następnie
-                                        zrób wydech i wróć kontrolując ciężar do pozycji wyjściowej.</p>
+                                        zrób wydech i wróć kontrolując ciężar do pozycji wyjściowej.
+                                    </p>
                                 </div>
                             </article>
                         </section>
@@ -553,8 +613,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wykroki ze sztangielkami</h2>
-                                    <p className="exercise__desc">Wykonanie: Podnieś sztangielki z podłoża. Pozycja
+                                    <h2 className="exercise__title">
+                                        Wykroki ze sztangielkami
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podnieś sztangielki z podłoża. Pozycja
                                         startowa i
                                         wykonanie ćwiczenia podobnie jak podczas wykroków ze sztangą, czyli klatka
                                         wypięta, a
@@ -572,7 +635,8 @@ const TrainingPlanUser = () => {
                                         ciężar przez
                                         odepchnięcie od podłoża (głównie przez pięty) i robiąc jednocześnie wydech.
                                         Powtórz
-                                        zaczynając tym razem od innej nogi.</p>
+                                        zaczynając tym razem od innej nogi.
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -581,8 +645,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Przysiad ze sztangą na barkach</h2>
-                                    <p className="exercise__desc">Wykonanie: Podejdź do stojaków, połóż ręce na
+                                    <h2 className="exercise__title">
+                                        Przysiad ze sztangą na barkach
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Podejdź do stojaków, połóż ręce na
                                         gryfie, a
                                         następnie
                                         podejdź po sztangę i ułóż gryf na barkach szerzej w uwagach). Wypnij klatkę
@@ -609,7 +676,8 @@ const TrainingPlanUser = () => {
                                         przodu i robiąc wydech, aż do pozycji wyjściowej. Podczas całego ćwiczenia
                                         zachowuj
                                         naturalną krzywiznę kręgosłupa (unikaj tzw. kociego grzbietu i okrągłych
-                                        pleców).</p>
+                                        pleców).
+                                    </p>
                                 </div>
                             </article>
                             <article className="exercise">
@@ -618,8 +686,11 @@ const TrainingPlanUser = () => {
                                     <img src={legs6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
-                                    <h2 className="exercise__title">Wypychanie nóg na suwnicy</h2>
-                                    <p className="exercise__desc">Wykonanie: Usiądź w siedzisku maszyny. Połóż stopy
+                                    <h2 className="exercise__title">
+                                        Wypychanie nóg na suwnicy
+                                    </h2>
+                                    <p className="exercise__desc">
+                                        Wykonanie: Usiądź w siedzisku maszyny. Połóż stopy
                                         na
                                         platformie
                                         (powinny w całości do niej przylegać) mniej więcej na szerokość barków
@@ -629,7 +700,8 @@ const TrainingPlanUser = () => {
                                         momencie,
                                         gdy nogi ugną się w kolanach pod kątem ok. 90 stopni zacznij wypychanie
                                         ciężaru,
-                                        jednocześnie robiąc wydech.</p>
+                                        jednocześnie robiąc wydech.
+                                    </p>
                                 </div>
                             </article>
                         </section>
@@ -637,25 +709,43 @@ const TrainingPlanUser = () => {
                             <div className="select-box">
                                 <label>Wybierz ćwiczenie na klatkę piersiową:</label>
                                 <select {...register("chest", {required: true})}>
-                                    <option value="chest1">Wyciskanie sztangi na ławce poziomej leżąc</option>
-                                    <option value="chest2">Wyciskanie sztangielek, skos górny</option>
-                                    <option value="chest3">Rozpiętki na maszynie, siedząc (butterfly)</option>
+                                    <option value="chest1">
+                                        Wyciskanie sztangi na ławce poziomej leżąc
+                                    </option>
+                                    <option value="chest2">
+                                        Wyciskanie sztangielek, skos górny
+                                    </option>
+                                    <option value="chest3">
+                                        Rozpiętki na maszynie, siedząc (butterfly)
+                                    </option>
                                 </select>
                             </div>
                             <div className="select-box">
                                 <label>Wybierz ćwiczenie na plecy:</label>
                                 <select {...register("back", {required: true})}>
-                                    <option value="back1">Wiosłowanie sztangą</option>
-                                    <option value="back2">Wiosłowanie końcem sztangi</option>
-                                    <option value="back3">Wiosłowanie na wyciągu dolnym</option>
+                                    <option value="back1">
+                                        Wiosłowanie sztangą
+                                    </option>
+                                    <option value="back2">
+                                        Wiosłowanie końcem sztangi
+                                    </option>
+                                    <option value="back3">
+                                        Wiosłowanie na wyciągu dolnym
+                                    </option>
                                 </select>
                             </div>
                             <div className="select-box">
                                 <label>Wybierz ćwiczenie na nogi:</label>
                                 <select {...register("legs", {required: true})}>
-                                    <option value="legs1">Wykroki ze sztangielkami</option>
-                                    <option value="legs2">Przysiad ze sztangą na barkach</option>
-                                    <option value="legs3">Wypychanie nóg na suwnicy</option>
+                                    <option value="legs1">
+                                        Wykroki ze sztangielkami
+                                    </option>
+                                    <option value="legs2">
+                                        Przysiad ze sztangą na barkach
+                                    </option>
+                                    <option value="legs3">
+                                        Wypychanie nóg na suwnicy
+                                    </option>
                                 </select>
                             </div>
                             <input type="submit" onClick={scroll.scrollToTop()}/>

@@ -4,7 +4,8 @@ import './calculators.scss'
 const Calculators = () => {
     return (
         <section className="calculators"
-                 id="calculatorsID">
+                 id="calculatorsID"
+        >
             <h3 className="calculators__title">
                 Skorzystaj za darmo z kalkulatorów
             </h3>
