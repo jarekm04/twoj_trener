@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import './notesUser.scss';
+import {auth, db} from "../../../firebase";
+import {set, ref, onValue, remove, update} from "firebase/database";
 import HeaderUser from "../HeaderUser";
 import {AiFillEdit, AiFillDelete} from "react-icons/ai";
-import {set, ref, onValue, remove, update} from "firebase/database";
-import {auth, db} from "../../../firebase";
 
 const NotesUser = () => {
     const [todo, setTodo] = useState("");

@@ -7,7 +7,6 @@ import {useNavigate} from "react-router-dom";
 
 
 const Form = ({closeModal}) => {
-
     const navigate = useNavigate();
     const [isRegistering, setIsRegistering] = useState(false);
 
@@ -62,7 +61,6 @@ const Form = ({closeModal}) => {
                             onChange={(e) => setValues({...values, registerName: e.target.value})}
                         />
                     </div>
-
                     <div className="email">
                         <label htmlFor="userEmail">Email</label>
                         <input
@@ -72,7 +70,6 @@ const Form = ({closeModal}) => {
                             onChange={(e) => setValues({...values, registerEmail: e.target.value})}
                         />
                     </div>
-
                     <div className="password">
                         <label htmlFor="userPassword">Hasło</label>
                         <input
@@ -104,7 +101,6 @@ const Form = ({closeModal}) => {
                             onChange={handleChange}
                         />
                     </div>
-
                     <div className="password">
                         <label htmlFor="userPassword">Hasło</label>
                         <input
@@ -123,7 +119,7 @@ const Form = ({closeModal}) => {
                             Zarejestruj się
                         </button>
                     </div>
-                    <p className="registerText">Nie masz konta? Kliknij zarejestruj się!</p>
+                    <p className="registerText">Nie masz konta?<br/>Kliknij zarejestruj się!</p>
                     <FontAwesomeIcon icon={faTimesCircle} onClick={closeModal}/>
                 </div>
             )}

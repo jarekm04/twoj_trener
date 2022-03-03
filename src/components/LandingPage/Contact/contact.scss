@@ -10,6 +10,14 @@
     left: 50%;
     transform: translateX(-50%);
     min-width: 395px;
+    @media screen and (max-width: 900px) {
+      font-size: 1.7rem;
+      min-width: auto;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
+      min-width: auto;
+    }
     span {
       color: $primaryFontColor;
     }
@@ -27,6 +35,14 @@
     left: 50%;
     transform: translatex(-50%);
     min-width: 610px;
+    @media screen and (max-width: 900px) {
+      font-size: 1.7rem;
+      min-width: 454px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
+      min-width: 374px;
+    }
     span {
       color: $primaryFontColor;
     }

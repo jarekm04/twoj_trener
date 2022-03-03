@@ -7,7 +7,7 @@ import "./slider.scss"
 
 const len = ImageSlider.length - 1;
 
-function Slider(props) {
+function Slider() {
     const [activeIndex, setActiveIndex] = useState(0)
     useEffect(() => {
         const interval = setInterval(() => {

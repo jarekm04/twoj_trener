@@ -1,5 +1,4 @@
 import React from 'react';
-import "./contact.scss";
 import contactVideo from '../../../assets/contact_video.mp4';
 
 const Contact = () => {

@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from 'react-scroll';
 
-const Menu = () => {
+const Menu = ({showSidebar, setShowSidebar}) => {
     return (
-        <nav className="header__menu">
+        <nav className={!showSidebar ? "header__menu" : "header__menu active"}>
             <ul className="menu">
                 <li>
                     <Link
@@ -12,6 +12,7 @@ const Menu = () => {
                         smooth={true}
                         duration={500}
                         offset={-80}
+                        onClick={() => setShowSidebar(!showSidebar)}
                     >
                         PLAN TRENINGOWY
                     </Link>
@@ -23,6 +24,7 @@ const Menu = () => {
                         smooth={true}
                         duration={500}
                         offset={-80}
+                        onClick={() => setShowSidebar(!showSidebar)}
                     >
                         WIADOMOŚCI
                     </Link>
@@ -34,6 +36,7 @@ const Menu = () => {
                         smooth={true}
                         uration={500}
                         offset={-80}
+                        onClick={() => setShowSidebar(!showSidebar)}
                     >
                         TWOJE NOTATKI
                     </Link>
@@ -45,6 +48,7 @@ const Menu = () => {
                         smooth={true}
                         duration={500}
                         offset={-80}
+                        onClick={() => setShowSidebar(!showSidebar)}
                     >
                         KALKULATORY
                     </Link>

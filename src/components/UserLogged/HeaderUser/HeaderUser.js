@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
-import "./headerUser.scss";
-import MenuUser from "./MenuUser";
 import {Link} from "react-router-dom";
 import {signOut} from "firebase/auth";
 import {auth} from "../../../firebase";
 import {useNavigate} from "react-router-dom";
+import MenuUser from "./MenuUser";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDumbbell} from "@fortawesome/free-solid-svg-icons";
 

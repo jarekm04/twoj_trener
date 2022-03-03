@@ -14,9 +14,6 @@ function SliderContent({activeIndex, imageSlider}) {
                     <h2 className="slide-title">
                         {slide.title}
                     </h2>
-                    <h3 className="slide-text">
-                        {slide.description}
-                    </h3>
                 </div>
             ))}
         </section>

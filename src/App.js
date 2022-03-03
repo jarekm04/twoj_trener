@@ -1,5 +1,5 @@
 import React from 'react';
-import "./index.scss";
+import "./styles/base.scss";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import WelcomePage from "./components/LandingPage/WelcomePage";
 import HomePage from "./components/UserLogged/HomePage";
