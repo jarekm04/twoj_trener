@@ -4,6 +4,9 @@
   .notes-box {
     height: 37.5rem;
     position: relative;
+    @media screen and (max-width: 800px) {
+      height: 30rem;
+    }
     .list {
       position: absolute;
       top: 40%;
@@ -11,6 +14,17 @@
       font-size: 1.5rem;
       font-style: italic;
       letter-spacing: 0.2rem;
+      margin-right: 10px;
+      @media screen and (max-width: 800px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: 650px) {
+        top: 30%;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 1rem;
+        left: 50%;
+      }
       .list__item {
         list-style-type: none;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;

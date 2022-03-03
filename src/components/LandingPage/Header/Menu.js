@@ -1,7 +1,10 @@
 import React from 'react';
 import {Link} from 'react-scroll';
+import useWindowDimensions from "../../Hooks/UseWindowDimensions";
 
 const Menu = ({showSidebar, setShowSidebar}) => {
+    const { width } = useWindowDimensions();
+
     return (
         <nav className={!showSidebar ? "header__menu" : "header__menu active"}>
             <ul className="menu">
@@ -11,7 +14,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         className="menu__item"
                         smooth={true}
                         duration={500}
-                        offset={-80}
+                        offset={width > 600 ? -80 : -65}
                         onClick={() => setShowSidebar(!showSidebar)}
                     >
                         PLAN TRENINGOWY
@@ -23,7 +26,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         className="menu__item"
                         smooth={true}
                         duration={500}
-                        offset={-80}
+                        offset={width > 600 ? -80 : -65}
                         onClick={() => setShowSidebar(!showSidebar)}
                     >
                         WIADOMOŚCI
@@ -35,7 +38,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         className="menu__item"
                         smooth={true}
                         uration={500}
-                        offset={-80}
+                        offset={width > 600 ? -80 : -65}
                         onClick={() => setShowSidebar(!showSidebar)}
                     >
                         TWOJE NOTATKI
@@ -47,7 +50,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         className="menu__item"
                         smooth={true}
                         duration={500}
-                        offset={-80}
+                        offset={width > 600 ? -80 : -65}
                         onClick={() => setShowSidebar(!showSidebar)}
                     >
                         KALKULATORY
