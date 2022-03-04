@@ -3,7 +3,6 @@ import SliderContent from "./SliderContent";
 import ImageSlider from "./ImageSlider";
 import Arrows from "./Arrows";
 import Dots from "./Dots";
-import "./slider.scss"
 
 const len = ImageSlider.length - 1;
 

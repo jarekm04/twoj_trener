@@ -13,30 +13,35 @@
     min-width: 22rem;
     width: 25%;
     background-color: #1a1a1a;
-    .login {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
+    @media screen and (max-width: 500px) {
+        min-width: 17rem;
     }
-    .email {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 2rem;
-    }
+    .login,
+    .email,
     .password {
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
+        @media screen and (max-width: 500px) {
+            margin-bottom: 1.4rem;
+        }
     }
-
     label {
         margin-bottom: 1rem;
         font-size: 1.2rem;
+        @media screen and (max-width: 500px) {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
     }
     input {
         height: 2.5rem;
         font-size: 1.2rem;
         text-indent: 10px;
+        @media screen and (max-width: 500px) {
+            height: 2rem;
+            font-size: 1rem;
+        }
     }
     .logButtons {
       display: flex;
@@ -46,11 +51,19 @@
         @include btn-styles;
         font-size: 1.1rem;
         min-width: 120px;
+          @media screen and (max-width: 500px) {
+              font-size: 0.9rem;
+              min-width: 90px;
+              padding: 0.5rem 0.4rem;
+          }
         }
     }
     .registerText {
         text-align: center;
         margin-top: 0.5rem;
+        @media screen and (max-width: 500px) {
+            font-size: 0.9rem;
+        }
     }
     .fa-times-circle {
         position: absolute;

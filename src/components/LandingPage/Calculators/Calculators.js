@@ -1,5 +1,4 @@
 import React from 'react';
-import './calculators.scss'
 
 const Calculators = () => {
     return (

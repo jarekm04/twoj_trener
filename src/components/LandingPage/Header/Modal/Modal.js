@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './modal.scss';
 import Form from "./Form";
 
 function Modal({showModal, closeModal}) {

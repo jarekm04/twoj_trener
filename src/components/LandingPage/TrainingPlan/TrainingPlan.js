@@ -1,5 +1,4 @@
 import React from 'react';
-import "./trainingPlan.scss";
 
 const TrainingPlan = () => {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import "./notes.scss";
 import { Parallax } from 'react-parallax';
 import notesBg from '../../../assets/notesBg.jpg';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

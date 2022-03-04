@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import {auth} from "../../../../firebase";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../../../firebase";
-import {useNavigate} from "react-router-dom";
-
 
 const Form = ({closeModal}) => {
     const navigate = useNavigate();
