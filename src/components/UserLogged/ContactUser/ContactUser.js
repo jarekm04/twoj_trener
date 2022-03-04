@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import './contactUser.scss';
+import {onValue, ref, set} from "firebase/database";
+import {auth, db} from "../../../firebase";
+import HeaderUser from "../HeaderUser";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane, faUserNinja} from "@fortawesome/free-solid-svg-icons";
 import {faUser} from "@fortawesome/free-regular-svg-icons";
-import HeaderUser from "../HeaderUser";
-import {onValue, ref, set} from "firebase/database";
-import {auth, db} from "../../../firebase";
 
 const ContactUser = () => {
     const [msg, setMsg] = useState("");
@@ -57,48 +56,44 @@ const ContactUser = () => {
         setMsg('');
     };
 
-
     return (
-        <>
-            <HeaderUser/>
-            <section className="contactUser container">
-                <div className="messages-box">
-                    <ul className="messages">
-                        <li className="trainer__message">
-                            <FontAwesomeIcon className="userNinjaIcon" icon={faUserNinja}/>
-                            Cześć {localStorage.getItem("userName")}! Miło mi Cię powitać na naszym portalu
-                            TwójTrener.pl. Jakby co jestem do Twojej dyspozycji.
-                        </li>
-                        <li className="user__message">
-                            Wiadomość użytkownika.
-                            <FontAwesomeIcon className="userIcon" icon={faUser}/>
-                        </li>
-                        {
-                            messages.map((message, index) => (
-                                    <li
-                                        key={index}
-                                        className="user__message"
-                                    >
-                                        {message.msg}
-                                        <FontAwesomeIcon className="userIcon" icon={faUser}/>
-                                    </li>
-                                )
+        <section className="contactUser container">
+            <div className="messages-box">
+                <ul className="messages">
+                    <li className="trainer__message">
+                        <FontAwesomeIcon className="userNinjaIcon" icon={faUserNinja}/>
+                        Cześć {localStorage.getItem("userName")}! Miło mi Cię powitać na naszym portalu
+                        TwójTrener.pl. Jakby co jestem do Twojej dyspozycji.
+                    </li>
+                    <li className="user__message">
+                        Wiadomość użytkownika.
+                        <FontAwesomeIcon className="userIcon" icon={faUser}/>
+                    </li>
+                    {
+                        messages.map((message, index) => (
+                                <li
+                                    key={index}
+                                    className="user__message"
+                                >
+                                    {message.msg}
+                                    <FontAwesomeIcon className="userIcon" icon={faUser}/>
+                                </li>
                             )
-                        }
-                    </ul>
-                    <form className="newMessage" onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            placeholder="Dodaj wiadomość..."
-                            value={msg}
-                            name="text"
-                            onChange={handleChange}
-                        />
-                        <FontAwesomeIcon className="sendPlane" icon={faPaperPlane} onClick={handleSubmit}/>
-                    </form>
-                </div>
-            </section>
-        </>
+                        )
+                    }
+                </ul>
+                <form className="newMessage" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder="Dodaj wiadomość..."
+                        value={msg}
+                        name="text"
+                        onChange={handleChange}
+                    />
+                    <FontAwesomeIcon className="sendPlane" icon={faPaperPlane} onClick={handleSubmit}/>
+                </form>
+            </div>
+        </section>
     );
 };
 

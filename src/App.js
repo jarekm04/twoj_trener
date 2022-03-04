@@ -9,8 +9,6 @@ import NotesUser from "./components/UserLogged/NotesUser";
 import CalculatorsUser from "./components/UserLogged/CalculatorsUser";
 import HeaderUser from "./components/UserLogged/HeaderUser";
 import Header from "./components/LandingPage/Header";
-import {auth} from "./firebase";
-
 
 function App() {
     const [showSidebar, setShowSidebar] = useState(false);
@@ -20,7 +18,10 @@ function App() {
     return (
         <>
             <Router>
-                { isUserLogged ? <HeaderUser showSidebar={showSidebar} setShowSidebar={setShowSidebar}/> : <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar}/> }
+                { isUserLogged ?
+                    <HeaderUser showSidebar={showSidebar} setShowSidebar={setShowSidebar} setIsUserLogged={setIsUserLogged} />
+                    : <Header showSidebar={showSidebar} setShowSidebar={setShowSidebar} setIsUserLogged={setIsUserLogged} />
+                }
                 <Routes>
                     <Route path="/" element={<WelcomePage />} />
                     <Route path="/homepage" element={<HomePage />} />

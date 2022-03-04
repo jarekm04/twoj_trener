@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {auth, db} from "../../../firebase";
 import {set, ref, onValue, remove, update} from "firebase/database";
-import HeaderUser from "../HeaderUser";
 import {AiFillEdit, AiFillDelete} from "react-icons/ai";
 
 const NotesUser = () => {
@@ -50,7 +49,6 @@ const NotesUser = () => {
             todo: todo,
             tempUidd: tempUidd
         });
-
         setTodo("");
         setIsEdit(false);
     };
@@ -60,40 +58,37 @@ const NotesUser = () => {
     };
 
     return (
-        <>
-            <HeaderUser/>
-            <section className="notesUser container">
-                <h1 className="notesUser__title">
-                    Nie chcesz o czymś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
-                    zapisywania
-                    swoich celów? Zrób to poniżej!
-                </h1>
-                <input
-                    type="text"
-                    value={todo}
-                    onChange={(e) => setTodo(e.target.value)}
-                    placeholder="Dodaj notatkę..."
-                />
-                {isEdit ? (
-                    <div>
-                        <button className="btn" onClick={handleEditConfirm}>Potwierdź</button>
+        <section className="notesUser container">
+            <h1 className="notesUser__title">
+                Nie chcesz o czymś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
+                zapisywania
+                swoich celów? Zrób to poniżej!
+            </h1>
+            <input
+                type="text"
+                value={todo}
+                onChange={(e) => setTodo(e.target.value)}
+                placeholder="Dodaj notatkę..."
+            />
+            {isEdit ? (
+                <div>
+                    <button className="btn" onClick={handleEditConfirm}>Potwierdź</button>
+                </div>
+            ) : (
+                <div>
+                    <button className="btn" onClick={writeToDatabase}>Dodaj</button>
+                </div>
+            )}
+            {todos.map((todo, index) => (
+                <div className="task" key={index}>
+                    <div className="icons">
+                        <AiFillEdit onClick={() => handleUpdate(todo)}/>
+                        <AiFillDelete onClick={() => handleDelete(todo.countID)}/>
                     </div>
-                ) : (
-                    <div>
-                        <button className="btn" onClick={writeToDatabase}>Dodaj</button>
-                    </div>
-                )}
-                {todos.map((todo, index) => (
-                    <div className="task" key={index}>
-                        <div className="icons">
-                            <AiFillEdit onClick={() => handleUpdate(todo)}/>
-                            <AiFillDelete onClick={() => handleDelete(todo.countID)}/>
-                        </div>
-                        <p>{todo.todo}</p>
-                    </div>
-                ))}
-            </section>
-        </>
+                    <p>{todo.todo}</p>
+                </div>
+            ))}
+        </section>
     );
 };
 

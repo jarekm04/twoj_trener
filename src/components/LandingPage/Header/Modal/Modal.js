@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Form from "./Form";
 
-function Modal({showModal, closeModal}) {
+function Modal({showModal, closeModal, setIsUserLogged}) {
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     const submitForm = () => {
@@ -13,7 +13,7 @@ function Modal({showModal, closeModal}) {
             {showModal ? (
                 <>
                     {!isSubmitted ? (
-                        <Form submitForm={submitForm} closeModal={closeModal}/>
+                        <Form submitForm={submitForm} closeModal={closeModal} setIsUserLogged={setIsUserLogged}/>
                     ) : null
                     }
                 </>

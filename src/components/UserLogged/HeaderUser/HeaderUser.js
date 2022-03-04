@@ -9,7 +9,7 @@ import {faDumbbell} from "@fortawesome/free-solid-svg-icons";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {AiOutlineCloseCircle} from "react-icons/ai";
 
-const HeaderUser = ({showSidebar, setShowSidebar}) => {
+const HeaderUser = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
     const navigate = useNavigate();
 
     useEffect(() => { //opcja, żeby niezalogowany użytkownik nie mógł się dostać do zalogowanych komponentów
@@ -22,7 +22,8 @@ const HeaderUser = ({showSidebar, setShowSidebar}) => {
 
     const handleSignOut = () => {
         signOut(auth).then(() => {
-            navigate("/")
+            setIsUserLogged(false);
+            navigate("/");
         }).catch(err => {
             alert(err.message);
         });

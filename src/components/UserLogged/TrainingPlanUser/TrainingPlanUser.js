@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import './trainingPlanUser.scss';
+import {useForm} from "react-hook-form";
+import {animateScroll as scroll} from 'react-scroll';
+import {Link} from "react-scroll";
 import {
     chest1,
     chest2,
@@ -20,10 +22,6 @@ import {
     legs5,
     legs6
 } from './pictures';
-import {useForm} from "react-hook-form";
-import HeaderUser from "../HeaderUser";
-import {animateScroll as scroll} from 'react-scroll';
-import {Link} from "react-scroll";
 
 const TrainingPlanUser = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
@@ -41,7 +39,6 @@ const TrainingPlanUser = () => {
 
     return (
         <>
-            <HeaderUser />
             {isSubmitted || localStorage.hasOwnProperty("chestExercise") ? (
                 <>
                     <section className="planReady" id="topScroll">

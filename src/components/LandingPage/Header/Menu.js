@@ -15,7 +15,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         smooth={true}
                         duration={500}
                         offset={width > 600 ? -80 : -65}
-                        onClick={() => setShowSidebar(!showSidebar)}
+                        onClick={width < 1050 ? () => setShowSidebar(!showSidebar) : null}
                     >
                         PLAN TRENINGOWY
                     </Link>
@@ -27,7 +27,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         smooth={true}
                         duration={500}
                         offset={width > 600 ? -80 : -65}
-                        onClick={() => setShowSidebar(!showSidebar)}
+                        onClick={width < 1050 ? () => setShowSidebar(!showSidebar) : null}
                     >
                         WIADOMOŚCI
                     </Link>
@@ -39,7 +39,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         smooth={true}
                         uration={500}
                         offset={width > 600 ? -80 : -65}
-                        onClick={() => setShowSidebar(!showSidebar)}
+                        onClick={width < 1050 ? () => setShowSidebar(!showSidebar) : null}
                     >
                         TWOJE NOTATKI
                     </Link>
@@ -51,7 +51,7 @@ const Menu = ({showSidebar, setShowSidebar}) => {
                         smooth={true}
                         duration={500}
                         offset={width > 600 ? -80 : -65}
-                        onClick={() => setShowSidebar(!showSidebar)}
+                        onClick={width < 1050 ? () => setShowSidebar(!showSidebar) : null}
                     >
                         KALKULATORY
                     </Link>

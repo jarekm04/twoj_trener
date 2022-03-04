@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import {auth} from "../../firebase";
 import {useNavigate} from "react-router-dom";
-import Header from "./Header";
 import Slider from "./Slider";
 import TrainingPlan from "./TrainingPlan";
 import Contact from "./Contact";
@@ -22,7 +21,6 @@ const WelcomePage = () => {
 
     return (
         <>
-            <Header />
             <Slider/>
             <TrainingPlan/>
             <Contact/>

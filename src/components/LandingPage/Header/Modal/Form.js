@@ -5,7 +5,7 @@ import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "fireba
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTimesCircle} from "@fortawesome/free-solid-svg-icons";
 
-const Form = ({closeModal}) => {
+const Form = ({closeModal, setIsUserLogged}) => {
     const navigate = useNavigate();
     const [isRegistering, setIsRegistering] = useState(false);
 
@@ -28,7 +28,9 @@ const Form = ({closeModal}) => {
     const handleSignIn = () => {
         signInWithEmailAndPassword(auth, values.userEmail, values.userPassword)
             .then(() => {
-                navigate('/homepage')
+                console.log()
+                setIsUserLogged(true);
+                navigate('/homepage');
             }).catch((err) =>
             alert(err.message));
     };
@@ -38,7 +40,8 @@ const Form = ({closeModal}) => {
         localStorage.setItem('userName', values.registerName);
         createUserWithEmailAndPassword(auth, values.registerEmail, values.registerPassword)
             .then(() => {
-            navigate("/homepage");
+                setIsUserLogged(true);
+                navigate("/homepage");
         })
             .catch((err) => alert(err.message));
     };

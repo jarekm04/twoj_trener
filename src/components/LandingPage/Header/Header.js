@@ -9,7 +9,7 @@ import {GiHamburgerMenu} from "react-icons/gi";
 import {AiOutlineCloseCircle} from "react-icons/ai";
 
 
-const Header = ({showSidebar, setShowSidebar}) => {
+const Header = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => setModal(!modal);
@@ -60,6 +60,7 @@ const Header = ({showSidebar, setShowSidebar}) => {
             <Modal
                 showModal={modal}
                 closeModal={toggleModal}
+                setIsUserLogged={setIsUserLogged}
             />
         </>
     );
