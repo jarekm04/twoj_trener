@@ -2,7 +2,7 @@
 @import "../../../styles/mixins";
 
 @media screen and (min-width: 1050px) {
-  .header.desktop {
+  .headerUser.desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,16 +81,113 @@
     margin-right: 0.4rem;
     font-size: 1.2rem;
   }
-  .header.mobile {
+  .headerUser.mobile {
     display: none;
   }
 }
 
-@media screen and (max-width: 1049px){
-  .header.mobile {
-
+@media screen and (max-width: 1120px){
+  .headerUser.mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 19;
+    opacity: 0.9;
+    @media screen and (max-width: 600px) {
+      height: 65px;
+    }
+    .header__logo {
+      @include headerLogo-styles;
+      @media screen and (max-width: 600px) {
+        font-size: 1.2rem;
+        line-height: 4rem;
+      }
+      @media screen and (max-width: 500px) {
+        min-width: 7.5rem;
+        font-size: 0.9rem;
+      }
+    }
+    .navIcon {
+      font-size: 4rem;
+      color: $primaryFontColor;
+      padding: 10px;
+      cursor: pointer;
+      transition: .3s ease-in;
+      border: 1px solid transparent;
+      border-radius: 100%;
+      @media screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
+      &:hover {
+        color: $secondaryFontColor;
+        opacity: 0.9;
+      }
+    }
+    .header__btn {
+      @include btn-styles;
+      min-width: 150px;
+      font-size: 1.3rem;
+      margin-left: 66px;
+      @media screen and (max-width: 600px) {
+        font-size: 1rem;
+        min-width: 122px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 0.9rem;
+        margin-left: 0;
+        padding: 0.3rem 0.3rem;
+        min-width: 100px;
+      }
+    }
+    .header__menu {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      transition: .3s linear;
+      &.active {
+        left:0;
+        top: 80px;
+        @media screen and (max-width: 600px) {
+          top: 65px;
+        }
+      }
+      .menu {
+        font-size: 1.3rem;
+        background-color: #000;
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
+        li {
+          height: 70px;
+          @media screen and (max-width: 600px) {
+            height: 50px;
+          }
+          .menu__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            cursor: pointer;
+            border-bottom: 1px dotted $secondaryFontColor;
+            @media screen and (max-width: 600px) {
+              height: 50px;
+            }
+            &:hover {
+              color: $primaryFontColor;
+            }
+          }
+        }
+      }
+    }
   }
-  .header.desktop {
+  .headerUser.desktop {
     display: none;
   }
 }

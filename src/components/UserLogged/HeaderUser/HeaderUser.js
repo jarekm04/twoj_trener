@@ -32,7 +32,7 @@ const HeaderUser = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
 
     return (
         <>
-            <header className="header desktop">
+            <header className="headerUser desktop">
                 <Link
                     to="/homepage"
                     className="header__logo"
@@ -48,7 +48,7 @@ const HeaderUser = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
                     Wyloguj się
                 </button>
             </header>
-            <header className="header mobile">
+            <header className="headerUser mobile">
                 <Link
                     to="/homepage"
                     className="header__logo"
@@ -67,7 +67,10 @@ const HeaderUser = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
                 <button className="header__btn" onClick={handleSignOut}>
                     Wyloguj się
                 </button>
-                <MenuUser showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+                <MenuUser
+                    showSidebar={showSidebar}
+                    setShowSidebar={setShowSidebar}
+                />
             </header>
         </>
     );
