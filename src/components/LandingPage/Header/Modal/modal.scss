@@ -52,9 +52,12 @@
         font-size: 1.1rem;
         min-width: 120px;
           @media screen and (max-width: 500px) {
-              font-size: 0.9rem;
+              font-size: 0.8rem;
               min-width: 90px;
               padding: 0.5rem 0.4rem;
+              .loginBtn {
+                  margin-right: 10px;
+              }
           }
         }
     }
