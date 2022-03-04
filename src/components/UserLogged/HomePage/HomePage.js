@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './homePage.scss';
 import HeaderUser from "../HeaderUser";
 
 
-const HomePage = () => {
+const HomePage = ({showSidebar, setShowSidebar}) => {
     const API_KEY = `8c4c6e6d4f60cd7b3219021003c5e0fe`;
     const [weatherData, setWeatherData] = useState([{}]);
     const [city, setCity] = useState("");
@@ -21,7 +21,7 @@ const HomePage = () => {
 
     return (
         <>
-            <HeaderUser/>
+            {/*<HeaderUser showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>*/}
             <section className="home-user container">
                 <h1 className="h-u__title">
                     Witaj {localStorage.getItem('userName')}!
@@ -66,14 +66,12 @@ const HomePage = () => {
                         </p>
                     </div>
                 )}
-
                 {weatherData.cod === "404" ? (
                     <p className="h-u__weather">
                         Nie znaleziono takiego miasta. Spróbuj ponownie.
                     </p>
                 ) : null
                 }
-
             </section>
         </>
 

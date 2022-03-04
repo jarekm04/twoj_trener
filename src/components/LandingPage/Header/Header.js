@@ -9,9 +9,8 @@ import {GiHamburgerMenu} from "react-icons/gi";
 import {AiOutlineCloseCircle} from "react-icons/ai";
 
 
-const Header = () => {
+const Header = ({showSidebar, setShowSidebar}) => {
     const [modal, setModal] = useState(false);
-    const [showSidebar, setShowSidebar] = useState(false);
 
     const toggleModal = () => setModal(!modal);
 
