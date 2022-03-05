@@ -7,22 +7,30 @@
     text-align: center;
     margin-top: 0.3rem;
     margin-bottom: 2rem;
+    @media screen and (max-width: 1050px) {
+      font-size: 2.5rem;
+    }
   }
   .h-u__textFirst {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    @media screen and (max-width: 1050px) {
+      font-size: 1.2rem;
+    }
   }
   .h-u__textSecond {
     font-size: 1.4rem;
     margin-bottom: 2.5rem;
     text-align: center;
     color: $primaryFontColor;
+    @media screen and (max-width: 1050px) {
+      font-size: 1.2rem;
+    }
   }
   .h-u__question {
     position: relative;
     padding: 0.8rem 0;
-    transform: translateX(15%);
     margin-bottom: 2rem;
     &:first-of-type {
       padding-top: 0;
@@ -36,7 +44,7 @@
       color: $primaryFontColor;
       font-weight: 100;
       letter-spacing: 0.01rem;
-      font-size: 17px;
+      font-size: 1.0625rem;
       box-sizing: border-box;
       padding: 10px 15px;
       display: block;
@@ -44,18 +52,33 @@
       margin-top: -40px;
       z-index: 2;
       pointer-events: none;
+      transform: translateX(87%);
+      @media screen and (max-width: 550px) {
+        font-size: 1rem;
+        transform: translateX(50%);
+      }
+      @media screen and (max-width: 400px) {
+        transform: translateX(30%);
+      }
     }
     input[type="text"] {
       @include input-styles;
+      transform: translateX(22%);
     }
   }
   .h-u__checkWeather {
     font-size: 2rem;
     text-align: center;
+    @media screen and (max-width: 1050px) {
+      font-size: 1.8rem;
+    }
   }
   .h-u__weather {
     font-size: 2.5rem;
     text-align: center;
+    @media screen and (max-width: 1050px) {
+      font-size: 2.1rem;
+    }
   }
 }
 
