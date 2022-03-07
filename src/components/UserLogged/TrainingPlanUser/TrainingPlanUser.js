@@ -11,8 +11,12 @@ const TrainingPlanUser = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     const navigate = useNavigate();
 
-    const showFullSizeImg = () => {
-        console.log("ta fotka")
+    const handleResetPlan = () => {
+        localStorage.removeItem("chestExercise");
+        localStorage.removeItem("backExercise");
+        localStorage.removeItem("legsExercise");
+        setIsSubmitted(false);
+        // navigate("/plan");
     }
 
     const onSubmit = data => {
@@ -129,6 +133,7 @@ const TrainingPlanUser = () => {
                             </Link>
                         </article>
                     </section>
+                    <button className="resetBtn" onClick={handleResetPlan}>Resetuj plan</button>
                     <section className="trainingPlanUser">
                         <section className="first-exercise" id="chestScroll">
                             {localStorage.getItem("chestExercise") === "chest1" ? (<article className="exercise">
@@ -418,16 +423,8 @@ const TrainingPlanUser = () => {
                         <section className="first-exercise">
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img
-                                        src={pics.chest1}
-                                        alt="chest"
-                                        onClick={showFullSizeImg}
-                                    />
-                                    <img
-                                        src={pics.chest2}
-                                        alt="chest"
-                                        onClick={showFullSizeImg}
-                                    />
+                                    <img src={pics.chest1} alt="chest"/>
+                                    <img src={pics.chest2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
