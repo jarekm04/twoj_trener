@@ -1,7 +1,7 @@
 @import "../../../styles/variables";
 @import "../../../styles/mixins";
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1120px) {
   .headerUser.desktop {
     display: flex;
     justify-content: space-between;
@@ -51,20 +51,23 @@
             border-right: 2px dotted;
           }
           .menu__item {
-            width: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8.5rem;
             height: 5rem;
+            font-size: 0.9rem;
             color: $primaryFontColor;
             text-decoration: none;
-            line-height: 5rem;
             text-align: center;
             transition: .4s;
             position: relative;
           }
         }
         li:nth-child(1) a {
-          padding-right: 14px;
+          width: 6rem;
         }
-        li:nth-child(4) a:before {
+        li:nth-child(5) a:before {
           height: 0;
           width: 0;
         }
@@ -107,13 +110,15 @@
       @media screen and (max-width: 600px) {
         font-size: 1.2rem;
         line-height: 4rem;
+        min-width: 11rem;
       }
       @media screen and (max-width: 500px) {
-        min-width: 7.5rem;
+        min-width: 7.7rem;
         font-size: 0.9rem;
       }
     }
     .navIcon {
+      min-width: 3rem;
       font-size: 4rem;
       color: $primaryFontColor;
       padding: 10px;
@@ -134,15 +139,15 @@
       min-width: 150px;
       font-size: 1.3rem;
       margin-left: 66px;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 650px) {
         font-size: 1rem;
-        min-width: 122px;
+        min-width: 128px;
+        margin-left: 20px;
       }
       @media screen and (max-width: 500px) {
         font-size: 0.9rem;
         margin-left: 0;
         padding: 0.3rem 0.3rem;
-        min-width: 100px;
       }
     }
     .header__menu {
@@ -176,6 +181,8 @@
             height: 70px;
             cursor: pointer;
             border-bottom: 1px dotted $secondaryFontColor;
+            color: $secondaryFontColor;
+            text-decoration: none;
             @media screen and (max-width: 600px) {
               height: 50px;
             }
@@ -184,6 +191,17 @@
             }
           }
         }
+      }
+    }
+    .header__user {
+      text-align: center;
+      margin-right: 0.2rem;
+      font-size: 1.2rem;
+      @media screen and (max-width: 650px) {
+        font-size: 0.9rem;
+      }
+      @media screen and (max-width: 450px) {
+        display: none;
       }
     }
   }

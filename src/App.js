@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import WelcomePage from "./components/LandingPage/WelcomePage";
 import HomePage from "./components/UserLogged/HomePage";
@@ -8,11 +8,19 @@ import NotesUser from "./components/UserLogged/NotesUser";
 import CalculatorsUser from "./components/UserLogged/CalculatorsUser";
 import HeaderUser from "./components/UserLogged/HeaderUser";
 import Header from "./components/LandingPage/Header";
+import {auth} from "./firebase";
 
 function App() {
     const [showSidebar, setShowSidebar] = useState(false);
     const [isUserLogged, setIsUserLogged] = useState(false);
-    console.log("Użytkownik zalogowany?" + isUserLogged);
+
+    useEffect(() => {
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                setIsUserLogged(true);
+            }
+        });
+    }, []);
 
     return (
         <Router>
