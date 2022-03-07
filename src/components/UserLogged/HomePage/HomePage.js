@@ -1,9 +1,12 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import {auth} from "../../../firebase";
 
 const HomePage = () => {
     const API_KEY = `8c4c6e6d4f60cd7b3219021003c5e0fe`;
     const [weatherData, setWeatherData] = useState([{}]);
     const [city, setCity] = useState("");
+    const navigate = useNavigate();
 
     const getWeather = (e) => {
         if (e.key === "Enter") {
@@ -15,6 +18,14 @@ const HomePage = () => {
                 })
         }
     }
+
+    useEffect(() => { //opcja, żeby niezalogowany użytkownik nie mógł się dostać do zalogowanych komponentów
+        auth.onAuthStateChanged((user) => {
+            if (!user) {
+                navigate("/");
+            }
+        });
+    }, []);
 
     return (
         <section className="home-user container">

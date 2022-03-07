@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import {signOut} from "firebase/auth";
 import {auth} from "../../../firebase";
@@ -11,14 +11,6 @@ import {AiOutlineCloseCircle} from "react-icons/ai";
 
 const HeaderUser = ({showSidebar, setShowSidebar, setIsUserLogged}) => {
     const navigate = useNavigate();
-
-    useEffect(() => { //opcja, żeby niezalogowany użytkownik nie mógł się dostać do zalogowanych komponentów
-        auth.onAuthStateChanged((user) => {
-            if (!user) {
-                navigate("/");
-            }
-        });
-    }, []);
 
     const handleSignOut = () => {
         signOut(auth).then(() => {

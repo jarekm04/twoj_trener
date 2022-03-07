@@ -12,6 +12,7 @@ import Header from "./components/LandingPage/Header";
 function App() {
     const [showSidebar, setShowSidebar] = useState(false);
     const [isUserLogged, setIsUserLogged] = useState(false);
+    console.log("Użytkownik zalogowany?" + isUserLogged);
 
     return (
         <Router>

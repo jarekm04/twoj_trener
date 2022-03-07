@@ -10,22 +10,35 @@
     @media screen and (max-width: 1050px) {
       font-size: 2.5rem;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
   }
   .h-u__textFirst {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
+    padding: 0 1rem;
     text-align: center;
     @media screen and (max-width: 1050px) {
       font-size: 1.2rem;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
   }
   .h-u__textSecond {
     font-size: 1.4rem;
     margin-bottom: 2.5rem;
+    padding: 0 1rem;
     text-align: center;
     color: $primaryFontColor;
     @media screen and (max-width: 1050px) {
       font-size: 1.2rem;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1rem;
     }
   }
   .h-u__question {
@@ -37,6 +50,9 @@
     }
     &:last-of-type {
       padding-bottom: 0;
+    }
+    @media screen and (max-width: 600px) {
+      margin-bottom: 1rem;
     }
     label {
       transition: ( all 0.25s cubic-bezier(.53,.01,.35,1.5));
@@ -52,7 +68,7 @@
       margin-top: -40px;
       z-index: 2;
       pointer-events: none;
-      transform: translateX(87%);
+      transform: translateX(90%);
       @media screen and (max-width: 550px) {
         font-size: 1rem;
         transform: translateX(50%);
@@ -64,6 +80,15 @@
     input[type="text"] {
       @include input-styles;
       transform: translateX(22%);
+      &:focus ~ label {
+        transform: translate(90%, -90%);
+        @media screen and (max-width: 550px) {
+          transform: translate(40%, -90%);
+        }
+      }
+      &:valid ~ label {
+        display: none;
+      }
     }
   }
   .h-u__checkWeather {
@@ -72,12 +97,18 @@
     @media screen and (max-width: 1050px) {
       font-size: 1.8rem;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
+    }
   }
   .h-u__weather {
     font-size: 2.5rem;
     text-align: center;
     @media screen and (max-width: 1050px) {
       font-size: 2.1rem;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 1.4rem;
     }
   }
 }

@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form";
 import {animateScroll as scroll} from 'react-scroll';
 import {Link} from "react-scroll";
+import {useNavigate} from "react-router-dom";
+import {auth} from "../../../firebase";
 import {
     chest1,
     chest2,
@@ -26,6 +28,8 @@ import {
 const TrainingPlanUser = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const navigate = useNavigate();
+
 
     const onSubmit = data => {
         console.log(data);
@@ -36,6 +40,14 @@ const TrainingPlanUser = () => {
 
         setIsSubmitted(true);
     };
+
+    useEffect(() => {
+        auth.onAuthStateChanged((user) => {
+            if (!user) {
+                navigate("/");
+            }
+        });
+    }, []);
 
     return (
         <>
