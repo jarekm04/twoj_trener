@@ -4,32 +4,16 @@ import {animateScroll as scroll} from 'react-scroll';
 import {Link} from "react-scroll";
 import {useNavigate} from "react-router-dom";
 import {auth} from "../../../firebase";
-import {
-    chest1,
-    chest2,
-    chest3,
-    chest4,
-    chest5,
-    chest6,
-    back1,
-    back2,
-    back3,
-    back4,
-    back5,
-    back6,
-    legs1,
-    legs2,
-    legs3,
-    legs4,
-    legs5,
-    legs6
-} from './pictures';
+import {pics} from './pictures';
 
 const TrainingPlanUser = () => {
     const {register, handleSubmit, formState: {errors}} = useForm();
     const [isSubmitted, setIsSubmitted] = useState(false);
     const navigate = useNavigate();
 
+    const showFullSizeImg = () => {
+        console.log("ta fotka")
+    }
 
     const onSubmit = data => {
         console.log(data);
@@ -149,8 +133,8 @@ const TrainingPlanUser = () => {
                         <section className="first-exercise" id="chestScroll">
                             {localStorage.getItem("chestExercise") === "chest1" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest1} alt="chest"/>
-                                    <img src={chest2} alt="chest"/>
+                                    <img src={pics.chest1} alt="chest"/>
+                                    <img src={pics.chest2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -180,8 +164,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("chestExercise") === "chest2" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest3} alt="chest"/>
-                                    <img src={chest4} alt="chest"/>
+                                    <img src={pics.chest3} alt="chest"/>
+                                    <img src={pics.chest4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -215,8 +199,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("chestExercise") === "chest3" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest5} alt="chest"/>
-                                    <img src={chest6} alt="chest"/>
+                                    <img src={pics.chest5} alt="chest"/>
+                                    <img src={pics.chest6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -254,8 +238,8 @@ const TrainingPlanUser = () => {
                         <section className="second-exercise" id="backScroll">
                             {localStorage.getItem("backExercise") === "back1" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back1} alt="chest"/>
-                                    <img src={back2} alt="chest"/>
+                                    <img src={pics.back1} alt="chest"/>
+                                    <img src={pics.back2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -280,8 +264,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("backExercise") === "back2" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back3} alt="chest"/>
-                                    <img src={back4} alt="chest"/>
+                                    <img src={pics.back3} alt="chest"/>
+                                    <img src={pics.back4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -306,8 +290,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("backExercise") === "back3" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back5} alt="chest"/>
-                                    <img src={back6} alt="chest"/>
+                                    <img src={pics.back5} alt="chest"/>
+                                    <img src={pics.back6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -330,8 +314,8 @@ const TrainingPlanUser = () => {
                         <section className="third-exercise" id="legsScroll">
                             {localStorage.getItem("legsExercise") === "legs1" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs1} alt="chest"/>
-                                    <img src={legs2} alt="chest"/>
+                                    <img src={pics.legs1} alt="chest"/>
+                                    <img src={pics.legs2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -362,8 +346,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("legsExercise") === "legs2" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs3} alt="chest"/>
-                                    <img src={legs4} alt="chest"/>
+                                    <img src={pics.legs3} alt="chest"/>
+                                    <img src={pics.legs4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -402,8 +386,8 @@ const TrainingPlanUser = () => {
                             </article>) : null}
                             {localStorage.getItem("legsExercise") === "legs3" ? (<article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs5} alt="chest"/>
-                                    <img src={legs6} alt="chest"/>
+                                    <img src={pics.legs5} alt="chest"/>
+                                    <img src={pics.legs6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -434,8 +418,16 @@ const TrainingPlanUser = () => {
                         <section className="first-exercise">
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest1} alt="chest"/>
-                                    <img src={chest2} alt="chest"/>
+                                    <img
+                                        src={pics.chest1}
+                                        alt="chest"
+                                        onClick={showFullSizeImg}
+                                    />
+                                    <img
+                                        src={pics.chest2}
+                                        alt="chest"
+                                        onClick={showFullSizeImg}
+                                    />
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -465,8 +457,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest3} alt="chest"/>
-                                    <img src={chest4} alt="chest"/>
+                                    <img src={pics.chest3} alt="chest"/>
+                                    <img src={pics.chest4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -500,8 +492,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={chest5} alt="chest"/>
-                                    <img src={chest6} alt="chest"/>
+                                    <img src={pics.chest5} alt="chest"/>
+                                    <img src={pics.chest6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -540,8 +532,8 @@ const TrainingPlanUser = () => {
                         <section className="second-exercise">
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back1} alt="chest"/>
-                                    <img src={back2} alt="chest"/>
+                                    <img src={pics.back1} alt="chest"/>
+                                    <img src={pics.back2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -567,8 +559,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back3} alt="chest"/>
-                                    <img src={back4} alt="chest"/>
+                                    <img src={pics.back3} alt="chest"/>
+                                    <img src={pics.back4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -594,8 +586,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={back5} alt="chest"/>
-                                    <img src={back6} alt="chest"/>
+                                    <img src={pics.back5} alt="chest"/>
+                                    <img src={pics.back6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -618,8 +610,8 @@ const TrainingPlanUser = () => {
                         <section className="third-exercise">
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs1} alt="chest"/>
-                                    <img src={legs2} alt="chest"/>
+                                    <img src={pics.legs1} alt="chest"/>
+                                    <img src={pics.legs2} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -650,8 +642,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs3} alt="chest"/>
-                                    <img src={legs4} alt="chest"/>
+                                    <img src={pics.legs3} alt="chest"/>
+                                    <img src={pics.legs4} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">
@@ -691,8 +683,8 @@ const TrainingPlanUser = () => {
                             </article>
                             <article className="exercise">
                                 <div className="exercise__images">
-                                    <img src={legs5} alt="chest"/>
-                                    <img src={legs6} alt="chest"/>
+                                    <img src={pics.legs5} alt="chest"/>
+                                    <img src={pics.legs6} alt="chest"/>
                                 </div>
                                 <div className="exercise__text">
                                     <h2 className="exercise__title">

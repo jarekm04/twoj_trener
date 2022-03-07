@@ -17,4 +17,4 @@ import legs4 from '../../../assets/exercises/legs/12nogi2.jpg';
 import legs5 from '../../../assets/exercises/legs/14nogi2.jpg';
 import legs6 from '../../../assets/exercises/legs/14nogi2.jpg';
 
-export {chest1, chest2, chest3, chest4, chest5, chest6, back1, back2, back3, back4, back5, back6, legs1, legs2, legs3, legs4, legs5, legs6};
+export const pics = {chest1, chest2, chest3, chest4, chest5, chest6, back1, back2, back3, back4, back5, back6, legs1, legs2, legs3, legs4, legs5, legs6};

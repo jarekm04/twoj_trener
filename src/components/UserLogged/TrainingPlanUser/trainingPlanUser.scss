@@ -7,6 +7,9 @@
     font-size: 2rem;
     text-align: center;
     margin: 2rem 1rem;
+    @media screen and (max-width: 600px) {
+      font-size: 1.5rem;
+    }
     span {
       color: $primaryFontColor;
     }
@@ -42,9 +45,21 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 2rem;
+    padding: 0 0.5rem;
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+    }
     label {
       font-size: 1.4rem;
       min-width: 430px;
+      @media screen and (max-width: 950px) {
+        font-size: 1.1rem;
+        min-width: 350px;
+      }
+      @media screen and (max-width: 800px) {
+        margin-bottom: 0.4rem;
+        min-width: auto;
+      }
     }
     select {
       min-width: 440px;
@@ -52,6 +67,13 @@
       font-size: 1.2rem;
       font-weight: bold;
       color: $secondaryFontColor;
+      @media screen and (max-width: 950px) {
+        font-size: 1.1rem;
+        min-width: 400px;
+      }
+      @media screen and (max-width: 800px) {
+        min-width: auto;
+      }
     }
   }
   input[type="submit"] {
