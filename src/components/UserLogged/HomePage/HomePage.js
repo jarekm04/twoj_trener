@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const HomePage = () => {
-    const API_KEY = `8c4c6e6d4f60cd7b3219021003c5e0fe`;
+    const API_KEY = `...`;
     const [weatherData, setWeatherData] = useState([{}]);
     const [city, setCity] = useState("");
 
