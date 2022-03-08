@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {auth, db} from "../../../firebase";
 import {set, ref, onValue, remove, update} from "firebase/database";
+import {useNavigate} from "react-router-dom";
 import {AiFillEdit, AiFillDelete} from "react-icons/ai";
 
 const NotesUser = () => {
@@ -8,7 +9,8 @@ const NotesUser = () => {
     const [todos, setTodos] = useState([]);
     const [isEdit, setIsEdit] = useState(false);
     const [tempUidd, setTempUidd] = useState("");
-    const [countID, setCountID] = useState(10);
+    const [countID, setCountID] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         auth.onAuthStateChanged((user) => {
@@ -18,11 +20,15 @@ const NotesUser = () => {
                     setTodos([]);
                     const data = snapshot.val();
                     if (data !== null) {
+                        setCountID((Object.values(data).length));
                         Object.values(data).map((todo) => {
                             setTodos((oldArray) => [...oldArray, todo]);
                         });
                     }
                 });
+            }
+            if (!user) {
+                navigate("/");
             }
         });
     }, []);
@@ -55,12 +61,12 @@ const NotesUser = () => {
 
     const handleDelete = (countID) => {
         remove(ref(db, `/${auth.currentUser.uid}/${countID}`));
-    };
+    }
 
     return (
         <section className="notesUser container">
             <h1 className="notesUser__title">
-                Nie chcesz o czymś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
+                Nie chcesz czegoś zapomnieć? Chcesz notować swój progres? Zwyczajnie potrzebujesz listy do
                 zapisywania
                 swoich celów? Zrób to poniżej!
             </h1>
@@ -79,15 +85,18 @@ const NotesUser = () => {
                     <button className="btn" onClick={writeToDatabase}>Dodaj</button>
                 </div>
             )}
-            {todos.map((todo, index) => (
-                <div className="task" key={index}>
-                    <div className="icons">
-                        <AiFillEdit onClick={() => handleUpdate(todo)}/>
-                        <AiFillDelete onClick={() => handleDelete(todo.countID)}/>
+            {todos
+                .map((todo, index) => (
+                    <div className="task" key={index}>
+                        <div className="icons">
+                            <AiFillEdit onClick={() => handleUpdate(todo)}/>
+                            <AiFillDelete onClick={() => handleDelete(todo.countID)}/>
+                        </div>
+                        <p>{todo.todo}</p>
                     </div>
-                    <p>{todo.todo}</p>
-                </div>
-            ))}
+                ))
+                .reverse()
+            }
         </section>
     );
 };
