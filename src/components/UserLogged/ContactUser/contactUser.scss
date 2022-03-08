@@ -4,6 +4,9 @@
 .contactUser {
   .messages-box {
     margin-top: 4rem;
+    @media screen and (max-width: 500px) {
+      margin-top: 1.5rem;
+    }
     .messages {
       display: flex;
       flex-direction: column;

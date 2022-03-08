@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import {auth} from "../../../firebase";
 
 const CalculatorsUser = () => {
     const [bmiResult, setBmiResult] = useState("");
     const [bmrResult, setBmrResult] = useState("");
+    const navigate = useNavigate();
 
     const [values, setValues] = useState({
         bmiWeight: '',
@@ -12,14 +15,6 @@ const CalculatorsUser = () => {
         bmrAge: '',
         bmrGender: ''
     });
-
-    const handleChange = (e) => {
-        const {name, value} = e.target;
-        setValues({
-            ...values,
-            [name]: value
-        });
-    };
 
     const getBmi = () => {
         if (!values.bmiWeight) return alert("BMI KALKULATOR: Proszę wpisać wagę");
@@ -47,6 +42,14 @@ const CalculatorsUser = () => {
 
         return bmrResult;
     }
+
+    useEffect(() => {
+        auth.onAuthStateChanged((user) => {
+            if (!user) {
+                navigate("/");
+            }
+        });
+    }, []);
 
     return (
         <div className="calculatorsUser container">

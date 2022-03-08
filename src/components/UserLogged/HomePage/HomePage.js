@@ -19,7 +19,7 @@ const HomePage = () => {
         }
     }
 
-    useEffect(() => { //opcja, żeby niezalogowany użytkownik nie mógł się dostać do zalogowanych komponentów
+    useEffect(() => {
         auth.onAuthStateChanged((user) => {
             if (!user) {
                 navigate("/");
