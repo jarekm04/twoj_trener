@@ -16,7 +16,6 @@ const TrainingPlanUser = () => {
         localStorage.removeItem("backExercise");
         localStorage.removeItem("legsExercise");
         setIsSubmitted(false);
-        // navigate("/plan");
     }
 
     const onSubmit = data => {

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {onValue, ref, set} from "firebase/database";
 import {auth, db} from "../../../firebase";
-import HeaderUser from "../HeaderUser";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faPaperPlane, faUserNinja} from "@fortawesome/free-solid-svg-icons";
 import {faUser} from "@fortawesome/free-regular-svg-icons";
