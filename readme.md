@@ -6,7 +6,6 @@ The application creates a sample training plan, allows you to leave a message to
 # Tools and technologies
 React, Sass, Firebase Authentication, RealtimeDatabase, Firebase Hosting, Webpack.
 
-Quick Start
 # Install dependencies
 npm install
 
