@@ -1,4 +1,6 @@
 # TwojTrener.PL
+Demo
+https://twojtrenerpl-ae88d.web.app/
 
 # About Project
 The application creates a sample training plan, allows you to leave a message to your trainer, create a ToDoList and check the current weather. Only for logged in users with Google Auth. The project uses a database and local storage.
